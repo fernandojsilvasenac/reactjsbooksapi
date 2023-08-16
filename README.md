@@ -6,7 +6,9 @@ Reactjs + Vite
 CSS module 
 #### Dependencias
 <div>
-  [Styled Components](https://styled-components.com/)&nbsp;
+  <p>
+  <a href="https://styled-components.com/">Styled Components</a>&nbsp;
+  </p>
   [Axios](https://axios-http.com/ptbr/docs/intro)&nbsp;
   [React-router-dom](https://reactrouter.com/en/main)&nbsp;
 </div>
