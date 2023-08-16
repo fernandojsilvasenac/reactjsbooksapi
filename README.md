@@ -5,7 +5,15 @@
 Reactjs + Vite
 CSS module 
 #### Dependencias
-Styled Components, Axios, React-router-dom
+<li>
+  Styled Components 
+</li>
+<li>
+  Axios
+</li>
+<li>
+React-router-dom
+</li>
 
 ### Backend Fake arquivo db.json
 Nodejs
