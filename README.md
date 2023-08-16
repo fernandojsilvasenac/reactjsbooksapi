@@ -7,10 +7,14 @@ CSS module
 #### Dependencias
 <div>
   <p>
-  <a href="https://styled-components.com/">Styled Components</a>&nbsp;
+    <a href="https://styled-components.com/">Styled Components</a>&nbsp;
   </p>
-  [Axios](https://axios-http.com/ptbr/docs/intro)&nbsp;
-  [React-router-dom](https://reactrouter.com/en/main)&nbsp;
+  <p>
+    <a href="https://axios-http.com/ptbr/docs/intro">Axios</a>&nbsp;
+  </p>
+  <p>
+    <a href="https://reactrouter.com/en/main">React-router-dom</a>&nbsp;
+  </p>
 </div>
 
 ### Backend Fake arquivo db.json
