@@ -1,9 +1,33 @@
-# React + Vite
+# Projeto de Listagem de Livros
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tecnologia utilizadas
+### Frontend
+Reactjs + Vite
+CSS module 
+#### Dependencias
+Styled Components
+Axios
+React-router-dom
 
-Currently, two official plugins are available:
+### Backend Fake arquivo db.json
+Nodejs
+#### Dependencias
+json-server
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# reactjsbooksapi
+### Rodar o projeto Frontend
+``` 
+git clone
+cd <nome-do-projeto>
+npm install
+npm run dev
+```
+
+### Rodar o projeto Backend Fake
+```
+cd api
+npm install
+npm start
+```
+
+
+
