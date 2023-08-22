@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import api from '../../services/api';
 
 const ItemContainer = styled.div`
   display:flex;
@@ -85,6 +86,13 @@ const ButtonPane = styled.div`
   gap:5px;
 `
 export default function ListaBooks({books}) {
+
+  function onDelete(id){
+      const url = `/books/${id}`;
+      api.delete(url)
+        .then ( (response) => {});
+  }
+
   return (
     <>
         <ItemContainer>
@@ -95,7 +103,7 @@ export default function ListaBooks({books}) {
           </Panel>
             <ButtonPane>
               <ButtonEdit>Editar</ButtonEdit>
-              <ButtonDelete>Deletar</ButtonDelete>
+              <ButtonDelete onClick={ () => onDelete(books.id)}>Deletar</ButtonDelete>
 
             </ButtonPane>
         </ItemContainer>
