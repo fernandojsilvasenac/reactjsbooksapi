@@ -42,7 +42,7 @@ const Button = styled.div`
   font-size: 14px;
   padding: 8px 15px;
   color: #fff;
-  background-color: #1414d2;
+  background-color: #8080f4;
   border-color: #6d6dec;
   border-radius: 4px;
 
@@ -50,6 +50,7 @@ const Button = styled.div`
 
 const ItemLink = styled.a`
   text-decoration: none;
+  background-color: #fff;
 `
 
 export default function ListBooks({books}) {

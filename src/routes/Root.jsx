@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import ListaBooks from '../pages/ListaBooks';
+import ListaAdministrar from '../pages/ListaAdministrar';
 import Cadastrar from '../pages/Cadastrar';
 import NotFound from '../pages/NotFound';
 
@@ -14,6 +15,7 @@ const Root = () => {
         <Router>
             <Routes>
                 <Route path="/" element={ <ListaBooks />} />
+                <Route path="/administrar" element={ <ListaAdministrar />} />
                 <Route path="/administrar/cadastrar" element={ <Cadastrar />} />
                 <Route path="*" element={ <NotFound />} />
             </Routes>
