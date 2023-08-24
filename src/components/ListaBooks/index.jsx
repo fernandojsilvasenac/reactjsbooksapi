@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 const ItemContainer = styled.div`
@@ -29,21 +30,7 @@ const Price = styled.div`
   margin-bottom: 5px;
 `;
 
-const Button = styled.a`
-  display: block;
-  font-weight: 400;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid transparent;
-  font-size: 14px;
-  padding: 8px 15px;
-  color: #fff;
-  background-color: #1414d2;
-  border-color: #6d6dec;
-  border-radius: 4px;
-`;
-
-const ButtonEdit = styled.a`
+const ButtonEdit = styled.span`
   display: block;
   font-weight: 400;
   text-align: center;
@@ -57,7 +44,7 @@ const ButtonEdit = styled.a`
   border-radius: 4px;
 `;
 
-const ButtonDelete = styled.a`
+const ButtonDelete = styled.span`
   display: block;
   font-weight: 400;
   text-align: center;
@@ -71,9 +58,6 @@ const ButtonDelete = styled.a`
   border-radius: 4px;
 `;
 
-const ItemLink = styled.a`
-  text-decoration: none;
-`
 const Panel = styled.div`
   display: flex;
   align-items: center;
@@ -85,9 +69,15 @@ const ButtonPane = styled.div`
   align-items: center;
   gap:5px;
 `
+
+
+
 export default function ListaBooks({books}) {
+  const [loading, setLoading] = useState(true);
 
   function onDelete(id){
+      setLoading(false);
+
       const url = `/books/${id}`;
       api.delete(url)
         .then ( (response) => {});
@@ -95,18 +85,36 @@ export default function ListaBooks({books}) {
 
   return (
     <>
-        <ItemContainer>
-          <Panel>
-            <Thumbnail src={books.image} />
-            <Title>{books.title}</Title>
-            <Price>{books.price}</Price>
-          </Panel>
-            <ButtonPane>
-              <ButtonEdit>Editar</ButtonEdit>
-              <ButtonDelete onClick={ () => onDelete(books.id)}>Deletar</ButtonDelete>
+      {!loading
+        ? (
+            <div>Deletado...</div>
+          )
+          :
+          (
+            <ItemContainer>
+              <Panel>
+                <p>{books.id}</p>
+                <Thumbnail src={books.image} />
+                <Title>{books.title}</Title>
+                <Price>{books.price}</Price>
+              </Panel>
+                <ButtonPane>
+                  <ButtonEdit>
+                    <Link to={`/administrar/editar/${books.id}`}>
+                      Editar
+                    </Link>
+                  </ButtonEdit>
+                  <ButtonDelete 
+                    // onClick={ () => console.log(`Deleted ${books.id}`)}
+                    onClick={ () => onDelete(books.id)}
+                  >
+                    Deletar
+                  </ButtonDelete>
 
-            </ButtonPane>
-        </ItemContainer>
+                </ButtonPane>
+            </ItemContainer>
+          )  
+      }      
     </>
   )
 }

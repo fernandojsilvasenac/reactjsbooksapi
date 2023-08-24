@@ -63,7 +63,7 @@ function ListaAdministrar (){
             value={search}
             onChange={(ev) => setSearch(ev.target.value)}
           />
-          <Link to='/administrar/cadastrar'>Cadastrar +</Link>
+          <Link className={styles.cadastrar} to='/administrar/cadastrar'>Cadastrar +</Link>
         </ButtonPane>
 
         <ListContainer>
