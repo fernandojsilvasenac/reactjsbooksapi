@@ -20,6 +20,13 @@
       "image": "https://m.media-amazon.com/images/I/31NR3RRS3VL.jpg",
       "price": 11.99,
       "url": "https://www.luiztools.com.br/livro-mongodb-amazon"
+    },
+    {
+      "title": "Scrum e Métodos Ágeis: Um Guia Prático",
+      "image": "https://m.media-amazon.com/images/I/41-54uULMvL.jpg",
+      "price": "R$ 6,39",
+      "url": "https://www.amazon.com.br/Scrum-Métodos-Ágeis-Guia-Prático-ebook/dp/B01LBSPIAG/?_encoding=UTF8&pd_rd_i=B01LBSPIAG&pd_rd_w=nt0HX&content-id=amzn1.sym.c9629874-8b86-484c-b359-8f697823d543&pf_rd_p=c9629874-8b86-484c-b359-8f697823d543&pf_rd_r=4BRX602XSQPA2FXSFHCQ&pd_rd_wg=FdQe4&pd_rd_r=5ef51efc-ae3f-4eae-beec-0147de0498fa&ref_=oct_dx_dotd",
+      "id": 31
     }
   ],
   "revistas": [

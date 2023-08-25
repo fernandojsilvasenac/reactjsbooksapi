@@ -16,6 +16,7 @@ const ListContainer = styled.div`
   justify-content: center;
   background-color: #ccc;
   padding: 10px;
+  gap:10px;
 `;
 
 function ListaBooks (){

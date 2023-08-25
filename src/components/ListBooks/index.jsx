@@ -10,6 +10,7 @@ const ItemContainer = styled.div`
   margin-bottom: 10px;
   margin-right: 10px;
   padding: 10px;
+  gap:10px;
 `;
 
 const Thumbnail = styled.img`
